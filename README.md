@@ -2,16 +2,16 @@
 
 A REST API contida neste projeto foi desenvolvida com base nas informações descritas em https://gist.github.com/vitorleal/158e4e3870337dacf9475a5a27e5c7c9
 
-Esta API foi desenvolvida para PHP7, utilizando o Slim Framework 3. Ela contém métodos de GET, POST, PUT e DELETE para gerenciamento de usuários de uma tabela, localizada em um banco de dados MySQL.
+Esta API foi desenvolvida utilizando o Slim Framework 3, e roda em cima do PHP7. Ela contém métodos de GET, POST, PUT e DELETE para gerenciamento de usuários de uma tabela, localizada em um banco de dados MySQL.
 
 Utilize [este guia](Endpoints.md) para informações sobre os Endpoints disponíveis para uso.
 
 ## Requisitos para execução do projeto
 
 É necessário ter instalado:
-* PHP 7+
-* MySQL/MariaDB
-* Composer
+* [PHP 7+](http://php.net)
+* [MySQL/MariaDB](http://mariadb.org)
+* [Composer](https://getcomposer.org/)
 
 ## Instalando a aplicação
 
@@ -34,12 +34,12 @@ Utilize [este guia](Endpoints.md) para informações sobre os Endpoints disponí
 5) Salve o arquivo, e utilize o comando abaixo (na raiz do projeto) para iniciar o webserver:
 > `php composer.phar start` ou `composer start`
 
-6) Acesse a URL http://localhost:8000 em seu navegador
+6) Acesse a URL http://localhost:8080 em seu navegador
 
 7) Para realizar os testes unitários criados, utilize o comando abaixo: 
-> `composer test`
+> `php composer.phar test` ou `composer test`
 
-8) Há uma lista com os requests prontos para o **Postman**. Deverá importar na ferramenta o arquivo `Rest_API_PostmanRequests.json`, localizado na raiz do repositório.
+8) Há uma lista com os requests prontos para o **Postman**. Importe o arquivo `Rest_API_PostmanRequests.json`, localizado na raiz do repositório, diretamente em seu Postman.
 
 ## Testes Unitários
 
