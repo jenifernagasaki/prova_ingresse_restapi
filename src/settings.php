@@ -19,7 +19,7 @@ return [
         'db' => [
             'connectionString' => 'mysql:host=localhost;dbname=provaingresse',
             'user' => 'root',
-            'password' => 'lu101192'
+            'password' => ''
         ]
     ],
 ];
