@@ -6,7 +6,10 @@ volumes:
 
 services:
     webapp:
-        image: php:7-alpine
+        image: php:7.2-cli
+        build:
+            context: "./"
+            dockerfile: "Dockerfile-webapp"
         working_dir: /var/www
         command: php -S 0.0.0.0:8080 -t public
         environment:
@@ -16,3 +19,20 @@ services:
         volumes:
             - .:/var/www
             - logs:/var/www/logs
+        links:
+            - mysqldb
+    mysqldb:
+        image: mariadb:latest
+        container_name: mysqldb
+        build:
+            context: "./"
+            dockerfile: "Dockerfile-mysql"
+        command: mysqld --user=root --verbose
+        ports:
+            - "3306:3306"
+        environment:
+            MYSQL_DATABASE: "provaingresse"
+            MYSQL_USER: "ingresse"
+            MYSQL_PASSWORD: "1234"
+            MYSQL_ROOT_PASSWORD: ""
+            MYSQL_ALLOW_EMPTY_PASSWORD: "yes"

@@ -10,7 +10,6 @@ namespace controllers
             $container = $app->getContainer();
             $settings = $container->get('settings');
             $this->PDO = new \PDO($settings['db']['connectionString'], $settings['db']['user'], $settings['db']['password']); // Instancia um objeto de conexão do banco com a string de conexão
-			//$this->PDO = new \PDO('mysql:host=localhost;dbname=provaingresse', 'root', 'lu101192'); // Instancia um objeto de conexão do banco com a string de conexão
 			$this->PDO->setAttribute( \PDO::ATTR_ERRMODE,\PDO::ERRMODE_EXCEPTION ); // habilita erros do PDO
 		}
 

@@ -3,9 +3,13 @@
 use Slim\Http\Request;
 use Slim\Http\Response;
 
-/* 
-	CONFIGURAÇÃO DE ROTAS DO PROJETO 
-*/
+require_once(__DIR__ . '/../controllers/users.php');
+
+/* *
+   * Chamadas padrão do Framework (genéricas)
+   * GET, POST, PUT, DELETE
+   */
+
 $app->get('/phpinfo', function (Request $request, Response $response, array $args) {
 	return $this->renderer->render($response, 'phpinfo.php', $args);
 });
@@ -15,8 +19,10 @@ $app->get('/[{name}]', function (Request $request, Response $response, array $ar
 });
 
 
-
-
+/* *
+   * Chamadas do Endpoint /users
+   * GET, POST, PUT, DELETE
+   */
 
 // Lista todos os usuários
 $app->get('/users/', function(Request $request, Response $response, array $args) use ($app){

@@ -17,7 +17,7 @@ return [
         ],
 
         'db' => [
-            'connectionString' => 'mysql:host=mysqldb;dbname=provaingresse',
+            'connectionString' => 'mysql:host=1270.0.1;dbname=provaingresse',
             'user' => 'root',
             'password' => ''
         ]

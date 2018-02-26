@@ -1,0 +1,2 @@
+FROM mariadb:latest
+ADD _Scripts/InicialBanco.sql /docker-entrypoint-initdb.d
