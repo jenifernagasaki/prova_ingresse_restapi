@@ -4,6 +4,8 @@ A REST API contida neste projeto foi desenvolvida com base nas informações des
 
 Esta API foi desenvolvida para PHP7, utilizando o Slim Framework 3. Ela contém métodos de GET, POST, PUT e DELETE para gerenciamento de usuários de uma tabela, localizada em um banco de dados MySQL.
 
+Utilize [este guia](Endpoints.md) para informações sobre os Endpoints disponíveis para uso.
+
 ## Requisitos para execução do projeto
 
 É necessário ter instalado:
