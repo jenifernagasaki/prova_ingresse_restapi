@@ -1,0 +1,136 @@
+{
+	"info": {
+		"name": "Rest API | Ingresse Dev Test",
+		"_postman_id": "7e98fe51-2879-3622-d7c6-6e5312077a84",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GET Users",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:8080/users/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"users",
+						""
+					]
+				},
+				"description": "Lista todos usuários"
+			},
+			"response": []
+		},
+		{
+			"name": "GET User (ID 1)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:8080/user/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"user",
+						"1"
+					]
+				},
+				"description": "Consulta usuário"
+			},
+			"response": []
+		},
+		{
+			"name": "POST User",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"login\": \"usuarioX\",\n\t\"senha\": \"testeSenha1234\",\n\t\"nome\": \"Usuario X\",\n\t\"data_nascimento\": \"1994-05-07\",\n\t\"sexo\": \"F\",\n\t\"telefone\": 11987654321,\n\t\"cpf\": 12345678900\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/user/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"user",
+						""
+					]
+				},
+				"description": "Cadastra novo usuário"
+			},
+			"response": []
+		},
+		{
+			"name": "PUT User (ID 2)",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"senha\": \"NovaSenhaTeste1234\",\n\t\"nome\": \"Usuário XYZ\",\n\t\"data_nascimento\": \"1998-09-22\",\n\t\"sexo\": \"M\",\n\t\"telefone\": 1123456789,\n\t\"cpf\": 98765432100\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/user/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"user",
+						"2"
+					]
+				},
+				"description": "Atualiza usuário existente"
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE User (ID 2)",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:8080/user/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"user",
+						"2"
+					]
+				},
+				"description": "Deleta usuário"
+			},
+			"response": []
+		}
+	]
+}
